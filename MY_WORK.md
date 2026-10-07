@@ -130,15 +130,20 @@
 ## Your Development Log
 
 ### Entry 1 - [Date and Time]
-**What I did**:
+**What I did**:Forked the repository and set up my student ID
 
 **Details**:
+ 1-Created GitHub account with university email
+ 2-Forked the starter repository and renamed it
+ 3-Changed student ID on line 150 to my actual ID (445050133)
+ 4-Compiled and ran the program successfully
+ 5-Committed and pushed: `Set my student ID: 445050133`
+ 
+**Challenges**:Using GitHub for the first time
 
-**Challenges**:
+**Solution**:I found a tutorial for GitHub and learned a little.
 
-**Solution**:
-
-**Time spent**:
+**Time spent**: 25 minutes
 
 ---
 
