@@ -30,6 +30,8 @@ class Process implements Runnable {
     private int timeQuantum; // Time slice (time quantum) allowed per CPU access (in milliseconds)
     private int remainingTime; // Time left for the process to finish its execution
     private int priority;
+    private int waitingTime = 0;
+    private long arrivalTime = 0;
 
     // Constructor to initialize the process with name, burst time, and time quantum
     public Process(String name, int burstTime, int timeQuantum, int priority) {
@@ -126,6 +128,28 @@ class Process implements Runnable {
         }
     }
 
+        public long getArrivalTime() {
+        return arrivalTime;
+    }
+    
+    public void setArrivalTime(long arrivalTime) {
+        this.arrivalTime = arrivalTime;
+    }
+
+    public int getWaitingTime() {
+        return waitingTime;
+    }
+
+    public void setWaitingTime(int waitingTime) {
+        this.waitingTime = waitingTime;
+    }
+
+    public void addWaitingTime(int time) {
+        this.waitingTime += time;
+    }
+    
+
+    
     public int getPriority() {
 
         return priority;
@@ -273,6 +297,12 @@ public class SchedulerSimulation {
                 }
             }
         }
+        double totalWaitingTime = 0;
+        for (Process p : processMap.values()) {
+
+            totalWaitingTime += p.getWaitingTime();
+        }
+        double avgWaitingTime = totalWaitingTime / numProcesses;
         
         // End of the scheduler simulation
         System.out.println(Colors.BOLD + Colors.BRIGHT_GREEN + 
@@ -280,6 +310,8 @@ public class SchedulerSimulation {
                           Colors.RESET);
         System.out.println(Colors.BOLD + Colors.GREEN + "🔄 Total context switches: " + contextSwitchCount +
                            Colors.RESET + "\n");
+        System.out.println(Colors.BOLD + Colors.CYAN + "⏱️ Average Waiting Time: "
+                         + String.format("%.2f", avgWaitingTime) + " ms" + Colors.RESET + "\n");                   
         System.out.println(Colors.BOLD + Colors.BRIGHT_GREEN + "║" + Colors.RESET + 
                           Colors.BG_GREEN + Colors.WHITE + Colors.BOLD + 
                           "                     ✓  ALL PROCESSES COMPLETED  ✓                            " + 
