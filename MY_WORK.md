@@ -148,41 +148,41 @@
 ---
 
 ### Entry 2 - [Date and Time]
-**What I did**:
+**What I did**:Put Feature 1: Process Priority
 
-**Details**:
+**Details**:Added priority tracking (1-10) to processes and updated theReady Queue display
 
-**Challenges**:
+**Challenges**:Making sure the queue order stays FIFO while showing the priority
 
-**Solution**:
+**Solution**:I read the assignment requirements again and realized I only needed to display it
 
-**Time spent**:
+**Time spent**:45 minutes
 
 ---
 
 ### Entry 3 - [Date and Time]
-**What I did**:
+**What I did**:Added Feature 2 (Context Switch Counter)
 
-**Details**:
+**Details**:Created counter variable to count how many times the schduler switches processes
 
-**Challenges**:
+**Challenges**:Wasn't sure where to increment the counter in the loop
 
-**Solution**:
+**Solution**:I Use some help from AI and  understanding 
 
-**Time spent**:
+**Time spent**:30 minutes
 
 ---
 
 ### Entry 4 - [Date and Time]
-**What I did**:
+**What I did**: put Feature 3 : Waiting Time
 
-**Details**:
+**Details**: Calculated the waiting time for processes and printed the final average
 
-**Challenges**:
+**Challenges**: I used the wrong formula for waiting time at first
 
-**Solution**:
+**Solution**: Corrected the equation to Turnaround Time - Burst Time
 
-**Time spent**:
+**Time spent**: 1 hour
 
 ---
 
@@ -216,13 +216,13 @@
 
 > 💡 **TIP:** Fill this in **last**, after all entries are written.
 
-**Total time spent on assignment**: [X hours]
+**Total time spent on assignment**: [I think 6 hours]
 
-**Most challenging part**:
+**Most challenging part**:Average Waiting Time
 
 **Most interesting learning**:
 
-**What I would do differently next time**:
+**What I would do differently next time**: 
 
 ---
 
